@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-    
+
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +23,7 @@ SECRET_KEY = 'django-insecure-yh0u@+)9vg%1$blh=9_h_nfasl2_df83i@3wp1yd1f=o6#-3^s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.verce.app']
 
 
 # Application definition
@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': 'mdrrmc_ibaan',
         'USER': 'postgres',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',  
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
@@ -156,12 +156,12 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_HOST_USER = 'mdrrmcibaanreports@gmail.com'  
-EMAIL_HOST_PASSWORD = 'yvge xuor bzxj bdrs'  
+EMAIL_HOST_USER = 'mdrrmcibaanreports@gmail.com'
+EMAIL_HOST_PASSWORD = 'yvge xuor bzxj bdrs'
 DEFAULT_FROM_EMAIL = 'mdrrmcibaan@gmail.com'
 
 OPENWEATHERMAP_API_KEY = '074b9e9f93888d463d148580ff82b8dd'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:8000",  
+    "http://127.0.0.1:8000",
 ]
