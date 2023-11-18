@@ -1,15 +1,6 @@
 import os
 from pathlib import Path
 
-import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +14,7 @@ SECRET_KEY = 'django-insecure-yh0u@+)9vg%1$blh=9_h_nfasl2_df83i@3wp1yd1f=o6#-3^s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.verce.app']
+ALLOWED_HOSTS = ['vercel.app', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -137,12 +128,11 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = [
-    # Add the path to your static directory
-    os.path.join(BASE_DIR, 'capstoneapp/static/capstoneapp'),
+    os.path.join(BASE_DIR, 'static_root')
 ]
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'capstoneapp/static/capstoneapp')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
